@@ -1,8 +1,5 @@
 
-A package to use esimcard functionality
-
-## Platform Support
-| Android | iOS |
+A Flutter implementation of esimcard sdk.
 
 ## Getting started
 Before you start, create an account with the providers and receive the token.
@@ -12,11 +9,13 @@ To start using this plugin, add `esimcardsdk` as a [dependency in your pubspec.y
 
 ```yaml
 dependencies:
-  pay: ^0.0.1
+  esimcardsdk: ^0.0.4
 ```
 
 
 ### Example
+
+```dart
 
 import 'package:esimcardsdk/esimcardsdk.dart';
 import 'package:esimcardsdk/src/extra/api_result_class.dart';
