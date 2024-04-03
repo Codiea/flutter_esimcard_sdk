@@ -2,7 +2,6 @@ import 'package:dio/dio.dart';
 import 'api_result_class.dart';
 import 'enums.dart';
 import 'sdk_error.dart';
-import 'my_style.dart';
 
 Future<ApiResult<Map<String, dynamic>, SdkError>> commonApiService({
   required String apiUrl,
@@ -13,8 +12,6 @@ Future<ApiResult<Map<String, dynamic>, SdkError>> commonApiService({
   Duration? recTimeOut,
 }) async {
   try {
-    MyStyle.printm(apiUrl);
-
     Response response;
     Dio dio = Dio();
 
@@ -77,11 +74,7 @@ Future<ApiResult<Map<String, dynamic>, SdkError>> commonApiService({
       );
     }
   } catch (e) {
-    MyStyle.printm("-----------exception 1 = $e");
-
     if (e is DioException) {
-      MyStyle.printm("-----------exception 2 = ${e.message}");
-
       return ApiResult.failure(_customException(e));
     } else {
       return ApiResult.failure(InvalidResponseFromApi());

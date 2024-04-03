@@ -16,9 +16,9 @@ import '../models/purchase_bundles/packages_model.dart';
 import '../models/purchase_bundles/pricing_model.dart';
 import '../models/purchase_bundles/purchase_data_only_model.dart';
 import '../models/purchase_bundles/purchase_data_voice_sms_model.dart';
-import '../utils/api_result_class.dart';
-import '../utils/enums.dart';
-import '../utils/sdk_error.dart';
+import '../extra/api_result_class.dart';
+import '../extra/enums.dart';
+import '../extra/sdk_error.dart';
 
 abstract class PurchaseBundlesInterface {
   Future<ApiResult<PackagesResponseModel, SdkError>> fetchPackages({
