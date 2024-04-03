@@ -1,0 +1,23 @@
+name: esimcardsdk
+description: A Flutter implementation of esimcard sdk.
+version: 0.0.1
+homepage: https://codiea.io/
+repository: https://github.com/google/json_serializable.dart/tree/master/json_serializable
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  dio: ^5.1.0  
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+
+flutter:
