@@ -1,3 +1,4 @@
+import '../extra/enum/enum_internal.dart';
 import '../models/purchase_bundles/continents_model.dart';
 import '../models/purchase_bundles/countries_model.dart';
 import '../models/purchase_bundles/global_packages_model.dart';
@@ -9,7 +10,7 @@ import '../models/purchase_bundles/purchase_data_only_model.dart';
 import '../models/purchase_bundles/purchase_data_voice_sms_model.dart';
 import '../extra/api_result_class.dart';
 import '../extra/common_api_service.dart';
-import '../extra/enums.dart';
+import '../extra/enum/enums_export.dart';
 import '../extra/sdk_error.dart';
 import 'interfaces.dart';
 

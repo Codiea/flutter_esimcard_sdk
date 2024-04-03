@@ -1,9 +1,10 @@
+import '../extra/enum/enum_internal.dart';
 import '../models/extra/balance_model.dart';
 import '../models/extra/network_coverage_model.dart';
 import '../models/extra/refill_model.dart';
 import '../extra/api_result_class.dart';
 import '../extra/common_api_service.dart';
-import '../extra/enums.dart';
+
 import '../extra/sdk_error.dart';
 import 'interfaces.dart';
 

@@ -17,7 +17,7 @@ import '../models/purchase_bundles/pricing_model.dart';
 import '../models/purchase_bundles/purchase_data_only_model.dart';
 import '../models/purchase_bundles/purchase_data_voice_sms_model.dart';
 import '../extra/api_result_class.dart';
-import '../extra/enums.dart';
+import '../extra/enum/enums_export.dart';
 import '../extra/sdk_error.dart';
 
 abstract class PurchaseBundlesInterface {

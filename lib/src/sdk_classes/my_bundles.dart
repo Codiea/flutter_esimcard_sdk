@@ -1,3 +1,4 @@
+import '../extra/enum/enum_internal.dart';
 import '../models/my_bundles/my_bundles_by_id_model.dart';
 import '../models/my_bundles/my_bundles_model.dart';
 import '../models/my_bundles/my_esim_by_id_model.dart';
@@ -6,7 +7,7 @@ import '../models/my_bundles/my_esims_model.dart';
 import '../models/my_bundles/packages_detail_model.dart';
 import '../extra/api_result_class.dart';
 import '../extra/common_api_service.dart';
-import '../extra/enums.dart';
+
 import '../extra/sdk_error.dart';
 import 'interfaces.dart';
 

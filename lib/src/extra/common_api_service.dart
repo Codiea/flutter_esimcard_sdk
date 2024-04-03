@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
+import 'package:esimcardsdk/src/extra/enum/enum_internal.dart';
 import 'api_result_class.dart';
-import 'enums.dart';
+
 import 'sdk_error.dart';
 
 Future<ApiResult<Map<String, dynamic>, SdkError>> commonApiService({

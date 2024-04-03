@@ -1,0 +1,1 @@
+enum EnumPackageType { dataOnly, datVoiceSms }
