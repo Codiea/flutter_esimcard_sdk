@@ -9,7 +9,7 @@ To start using this plugin, add `esimcardsdk` as a [dependency in your pubspec.y
 
 ```yaml
 dependencies:
-  esimcardsdk: ^0.0.4
+  esimcardsdk: ^0.0.6
 ```
 
 
