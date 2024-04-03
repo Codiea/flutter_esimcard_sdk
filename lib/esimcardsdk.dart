@@ -84,7 +84,7 @@ class EsimCardSDK {
         } else {
           return ApiResult.failure(
             CustomApiError(
-              description: res.data!["message"] ?? "something went wrong",
+              error: res.data!["message"] ?? "something went wrong",
             ),
           );
         }

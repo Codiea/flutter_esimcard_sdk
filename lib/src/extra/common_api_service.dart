@@ -54,7 +54,7 @@ Future<ApiResult<Map<String, dynamic>, SdkError>> commonApiService({
           response.data.containsKey("message")) {
         return ApiResult.failure(
           CustomApiError(
-            description: response.data["message"],
+            error: response.data["message"],
             statusCode: response.statusCode,
           ),
         );
@@ -68,7 +68,7 @@ Future<ApiResult<Map<String, dynamic>, SdkError>> commonApiService({
     } else {
       return ApiResult.failure(
         InvalidResponseFromApi(
-          comment: response.toString(),
+          description: response.toString(),
           statusCode: response.statusCode,
         ),
       );
@@ -88,13 +88,13 @@ SdkError _customException(DioException dioError) {
     case DioExceptionType.sendTimeout:
     case DioExceptionType.receiveTimeout:
       return CustomApiError(
-        description: "Timeout occurred while sending or receiving",
+        error: "Timeout occurred while sending or receiving",
         statusCode: dioError.response?.statusCode,
       );
 
     case DioExceptionType.cancel:
       return CustomApiError(
-        description: "Request to API server was cancelled",
+        error: "Request to API server was cancelled",
         statusCode: dioError.response?.statusCode,
       );
 
@@ -121,7 +121,7 @@ SdkError _customException(DioException dioError) {
 
     default:
       return CustomApiError(
-        description: "Something went wrong, Error = ${dioError.response?.data}",
+        error: "Something went wrong, Error = ${dioError.response?.data}",
         statusCode: dioError.response?.statusCode,
       );
   }
@@ -131,27 +131,27 @@ SdkError _getErrorType(int? statusCode, dynamic error) {
   switch (statusCode) {
     case 400:
       return BadRequestError(
-        comment: error.toString(),
+        description: error.toString(),
         statusCode: statusCode,
       );
 
     case 404:
       return NotFoundError(
-        comment: error.toString(),
+        description: error.toString(),
         statusCode: statusCode,
       );
 
     case 500:
       return InternalServerError(
-        comment: error.toString(),
+        description: error.toString(),
         statusCode: statusCode,
       );
 
     default:
       return CustomApiError(
-        description: "Something went wrong, Error = $error",
+        error: "Something went wrong, Error = $error",
         statusCode: statusCode,
-        comment: error.toString(),
+        description: error.toString(),
       );
   }
 }

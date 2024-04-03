@@ -1,40 +1,44 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+A package to use esimcard functionality
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
-
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+## Platform Support
+| Android | iOS |
 
 ## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+Before you start, create an account with the providers and receive the token.
 
 ## Usage
+To start using this plugin, add `esimcardsdk` as a [dependency in your pubspec.yaml file](https://flutter.io/platform-plugins/):
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
-```dart
-const like = 'sample';
+```yaml
+dependencies:
+  pay: ^0.0.1
 ```
 
-## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
-# flutter_esimcard_sdk
+### Example
+
+import 'package:esimcardsdk/esimcardsdk.dart';
+import 'package:esimcardsdk/src/extra/api_result_class.dart';
+import 'package:esimcardsdk/src/extra/sdk_error.dart';
+import 'package:esimcardsdk/src/models/purchase_bundles/countries_model.dart';
+
+Future<void> main() async {
+  const String token = "";
+  EsimCardSDK esimCardSDK = EsimCardSDK();
+
+  // first you cave to call config, to set the sdk
+  ApiResult<String, SdkError> configRes = await esimCardSDK.config(token);
+
+  // if the config isSuccess is true, you can now call other functions
+  if (configRes.isSuccess) {
+    ApiResult<CountriesResponseModel, SdkError> result =
+        await esimCardSDK.fetchCountries(token: token);
+    if (result.isSuccess) {
+      for (var i = 0; i < result.data!.data!.length; i++) {
+        print(result.data!.data![i].name);
+      }
+    }
+  }
+}
+```
