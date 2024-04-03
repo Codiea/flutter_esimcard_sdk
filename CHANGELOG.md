@@ -1,3 +1,6 @@
+## 0.0.7
+* some bugs fixed
+
 ## 0.0.6
 * some bugs fixed
 

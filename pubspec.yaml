@@ -1,6 +1,6 @@
 name: esimcardsdk
-description: ESIMCARD SDK for Flutter offers a powerful toolkit for developers to integrate ESIMCARD services seamlessly into their Flutter applications. With this SDK, developers can access a range of functionalities, enabling robust and efficient interactions with ESIMCARD APIs, enhancing the capabilities of Flutter apps with ease.
-version: 0.0.6
+description: ESIMCARD SDK for Flutter enables seamless integration of ESIMCARD services into apps. Access APIs for robust interactions, enhancing Flutter capabilities.
+version: 0.0.7
 homepage: https://codiea.io/
 repository: https://github.com/Codiea/flutter_esimcard_sdk
 
